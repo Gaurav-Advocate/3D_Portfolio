@@ -1,5 +1,3 @@
-import { BrowserRouter } from "react-router-dom";
-
 import {
   About,
   Contact,
@@ -15,7 +13,6 @@ import {
 function App() {
   return (
     <>
-      <BrowserRouter>
         <div className="relative z-0 bg-primary">
           <div className="flex bg-hero-pattern bg-cover bg-center bg-no-repeat">
             <Navbar />
@@ -29,9 +26,9 @@ function App() {
           <div className="relative z-0">
             <Contact />
             <StarsCanvas />
+
           </div>
         </div>
-      </BrowserRouter>
     </>
   );
 }
