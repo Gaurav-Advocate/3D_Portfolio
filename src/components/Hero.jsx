@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
-import { styles } from "../style";
-import ComputersCanvas  from "./canvas/Computers"; 
- 
+import { styles } from "../styles";
+import ComputersCanvas from "./canvas/Computers";
+
 const Hero = () => {
   return (
     <section className="relative mx-auto h-screen w-full">
@@ -28,7 +28,7 @@ const Hero = () => {
       <ComputersCanvas />
 
       <div className="absolute bottom-32 flex w-full items-center justify-center xs:bottom-10">
-        <a href="#about">
+        <a href="#about" className="scroll-smooth">
           <div className="flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 border-secondary p-2">
             <motion.div
               animate={{

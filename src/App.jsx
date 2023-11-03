@@ -13,7 +13,7 @@ import {
 function App() {
   return (
     <>
-        <div className="relative z-0 bg-primary">
+        <div className="relative z-0 bg-primary ">
           <div className="flex bg-hero-pattern bg-cover bg-center bg-no-repeat">
             <Navbar />
             <Hero />

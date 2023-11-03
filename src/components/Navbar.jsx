@@ -1,17 +1,37 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { styles } from "../style";
+import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
 useState;
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(true);
+  const [isNavColor, setNavColor] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = scrollY;
+      if (scrollTop > 100) {
+        setNavColor(true);
+      } else {
+        setNavColor(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav
-      className={` ${styles.paddingX} fixed top-0 z-20 flex w-full items-center bg-primary py-5`}
+      className={` ${
+        styles.paddingX
+      } fixed top-0 z-20 flex w-full items-center ${
+        isNavColor ? "bg-primary" : ""
+      } py-5`}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         <Link
@@ -62,8 +82,9 @@ const Navbar = () => {
                   className={`${
                     active === link.title ? "text-white" : "text-secondary"
                   } font-poppins font-medium cursor-pointer text-[16px] hover:text-white `}
-                  onClick={() => {setActive(link.title)
-                  setToggle(!toggle)
+                  onClick={() => {
+                    setActive(link.title);
+                    setToggle(!toggle);
                   }}
                 >
                   <a href={`#${link.id}`}>{link.title}</a>
