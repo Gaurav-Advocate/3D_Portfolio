@@ -11,6 +11,7 @@ import { SectionWrapper } from "../hoc";
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
+      className="flex pb-3"
       contentStyle={{
         background: "#1d1836",
         color: "#fff",
@@ -19,16 +20,16 @@ const ExperienceCard = ({ experience }) => {
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
-        <div className="flex justify-center items-center w-full h-full">
+        <div className="flex w-20">
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className="w-[60%] h-[60%] object-contain"
+            className="w-[40%] h-[20%] object-contain"
           />
         </div>
       }
     >
-      <div>
+      <div className="">
         <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
         <p
           className="text-secondary text-[16px] font-semibold"
@@ -37,7 +38,6 @@ const ExperienceCard = ({ experience }) => {
           {experience.company_name}
         </p>
       </div>
-
       <ul className="mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point, index) => (
           <li
@@ -48,7 +48,6 @@ const ExperienceCard = ({ experience }) => {
           </li>
         ))}
       </ul>
-      
     </VerticalTimelineElement>
   );
 };

@@ -4,8 +4,12 @@ import { OrbitControls, Preload, SpotLight, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({isMobile}) => {
+
+  // stores the computer 3D model (react-theejs)
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
+
+  // lighting required 
   return (
     <group> 
       <hemisphereLight intensity={2} groundColor={0x000000} />   
@@ -16,12 +20,17 @@ const Computers = ({isMobile}) => {
               shadow-mapSize={1024}
       />
       <SpotLight  position={[-20, 50,10]} />
+  
+      {/* component that displays on the screen  */}
+
+
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.6 : 0.75}
         position={isMobile ? [0, -2.5, -1.5] : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
+      
     </group>
   );
 };
@@ -29,10 +38,12 @@ const Computers = ({isMobile}) => {
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const mediaQuary = matchMedia('(max-width: 650px)')
 
-    setIsMobile(mediaQuary.matches)
+  // responsiveness of the computer component 
+  useEffect(() => {
+    const mediaQuary = matchMedia('(max-width: 650px)') // returns true && false 
+
+    setIsMobile(mediaQuary.matches) 
 
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches)
@@ -46,6 +57,7 @@ const ComputersCanvas = () => {
 
   }, [])
 
+  // Loading State handler 
   return (
     <Canvas
       frameloop="demand"
@@ -60,7 +72,7 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <ambientLight intensity={0.3} /> 
+        <ambientLight intensity={1.6} /> 
         <Computers isMobile={isMobile} />
       </Suspense>
 
