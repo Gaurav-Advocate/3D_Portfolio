@@ -10,6 +10,17 @@ import {
   StarsCanvas,
 } from "./components";
 
+/**
+ * 
+ * @returns
+ * Todo~ Learn Responsiveness
+ * Todo~ Folder structure (Proper die section )
+ * Todo~ React Library ( Main CSS )
+ * Todo~ CSS Framework (chose 1 and arrangement of design system )
+ * 
+ */
+
+
 function App() {
   return (
     <>
@@ -26,7 +37,6 @@ function App() {
           <div className="relative z-0">
             <Contact />
             <StarsCanvas />
-
           </div>
         </div>
     </>

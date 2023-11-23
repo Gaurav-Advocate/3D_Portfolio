@@ -1,6 +1,7 @@
 import { Suspense, useEffect, useState } from "react";
-import { Canvas, events } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, SpotLight, useGLTF } from "@react-three/drei";
+
 import CanvasLoader from "../Loader";
 
 const Computers = ({isMobile}) => {
