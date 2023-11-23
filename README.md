@@ -1,1 +1,1 @@
-# React + Vite + Threejs _ framer motion + Tailwindcss 
+# React + Vite + Threejs + framer motion + Tailwindcss 
