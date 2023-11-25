@@ -6,5 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 8880
-  }
+  },
+  base: '/3D_Portfolio/'
 })
