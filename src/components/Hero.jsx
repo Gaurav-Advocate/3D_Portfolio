@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import ComputersCanvas from "./canvas/Computers";
 
-const Hero = () => {
+const Hero = ({textInhance, textNormal}) => {
+
   return (
     <section className="relative mx-auto h-screen w-full">
       <div
@@ -14,7 +15,7 @@ const Hero = () => {
           <div className="violet-gradient h-80 w-1"></div>
         </div>
 
-        <div className="px-4">
+        <div onMouseEnter={textInhance()} onMouseLeave={textNormal()} className="px-4">
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className="text-[#915eff]">Gaurav</span>
           </h1>
