@@ -1,7 +1,7 @@
 
 # Portfolio With Threejs
 
-![3D portfolio](<Screenshot 2023-11-23 233512.png>)
+![3D portfolio](./src/assets/portfolio_image.png)
 
 ![3D portfolio](https://www.dropbox.com/scl/fi/yi6g01xniwtcdgix1pxfj/Screenshot-2023-11-23-233512.png?rlkey=yj8dav79ye6avfvidl7nypkdy&dl=0)
 

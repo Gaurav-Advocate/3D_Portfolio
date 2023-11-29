@@ -5,7 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 8880
+    port: 8880,
+    host: true,
   },
   base: '/3D_Portfolio'
 })

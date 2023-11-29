@@ -15,7 +15,11 @@ const Hero = ({textInhance, textNormal}) => {
           <div className="violet-gradient h-80 w-1"></div>
         </div>
 
-        <div onMouseEnter={textInhance()} onMouseLeave={textNormal()} className="px-4">
+        <div 
+        
+        // onMouseEnter={textInhance()} onMouseLeave={textNormal()} 
+        
+        className="px-4">
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className="text-[#915eff]">Gaurav</span>
           </h1>

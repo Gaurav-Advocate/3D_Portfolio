@@ -39,37 +39,40 @@ function App() {
     },
   };
 
-  function mouseEffect(e) {
-    setMousePosition({ x: e.clientX, y: e.clientY });
-  }
+  
 
-  useEffect(() => {
-    addEventListener("mousemove", mouseEffect);
+  // useEffect(() => {
 
-    return () => {
-      removeEventListener("mousemove", mouseEffect);
-    };
-  }, []);
+  //   function mouseEffect(e) {
+  //     setMousePosition({ x: e.clientX, y: e.clientY });
+  //   }
 
-  const textInhance = () => setMouseModes("text");
-  const textNormal = () => setMouseModes("default");
+  //   addEventListener("mousemove", mouseEffect);
+
+  //   return () => {
+  //     removeEventListener("mousemove", mouseEffect);
+  //   };
+  // }, []);
+
+  // const textInhance = () => setMouseModes("text");
+  // const textNormal = () => setMouseModes("default");
 
   return (
     <>
-      <div className="relative z-0 bg-primary ">
-        <div className="flex bg-hero-pattern bg-cover bg-center bg-no-repeat">
+      <div className="relative z-0 bg-primary">
+        <div className="flex bg-hero-pattern bg-cover bg-center bg-no-repeat pointer-events-none">
           <Navbar />
           <Mouse
             cursoreMove={cusoreMove}
             mouseModes={mouseModes}
-            mousePosition={mousePosition}
           />
           
-          <Hero textInhance={textInhance} textNormal={textNormal} />
+          <Hero 
+          // textInhance={textInhance} textNormal={textNormal}
+           />
         </div>
-
         <About />
-        {/* <Experience /> */}
+        <Experience />
         <Tech />
         <Works />
         <Feedbacks />

@@ -27,7 +27,9 @@ function ServiceCard({ index, title, icon }) {
             alt="web-development"
             className="w-16 h-16 object-contain"
           />
-          <h3 className="ext-white text-[20px] font-bold text-center">{title}</h3>
+          <h3 className="ext-white text-[20px] font-bold text-center">
+            {title}
+          </h3>
         </div>
       </motion.div>
     </Tilt>
@@ -37,7 +39,7 @@ function ServiceCard({ index, title, icon }) {
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()} className="mt-4" >
+      <motion.div variants={textVariant()} className="mt-4 ">
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
