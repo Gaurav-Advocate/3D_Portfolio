@@ -10,9 +10,6 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(true);
   const [isNavColor, setNavColor] = useState(false);
 
-  console.log(active);
-
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = scrollY;
@@ -61,7 +58,7 @@ const Navbar = () => {
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
               } cursor-pointer text-[18px] font-medium hover:text-white`}
-              onClick={() => (setActive(link.title, console.log('click')))}
+              onClick={() => (setActive(link.title))}
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
@@ -89,7 +86,6 @@ const Navbar = () => {
                   onClick={() => {
                     setActive(link.title);
                     setToggle(!toggle);
-                    console.log('click');
                   }}
                 >
                   <a href={`#${link.id}`}>{link.title}</a>
