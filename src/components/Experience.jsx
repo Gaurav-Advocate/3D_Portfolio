@@ -1,17 +1,19 @@
 import { styles } from "../styles";
 import { motion } from "framer-motion";
-import { fadeIn, textVariant } from "../utils/motion";
-import { experiences } from "../constants";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+import 'react-vertical-timeline-component/style.min.css'
+
 import { SectionWrapper } from "../hoc";
+import { experiences } from "../constants";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
-      className="flex pb-3"
+      className="pb-3"
       contentStyle={{
         background: "#1d1836",
         color: "#fff",
@@ -20,16 +22,16 @@ const ExperienceCard = ({ experience }) => {
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
-        <div className="flex w-20">
+        <div className="flex h-full items-center justify-center ">
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className="w-[40%] h-[20%] object-contain"
+            className="w-[60%] h-[60%] object-contain"
           />
         </div>
       }
     >
-      <div className="">
+      <div>
         <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
         <p
           className="text-secondary text-[16px] font-semibold"
@@ -62,9 +64,11 @@ const Experience = () => {
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
-          {experiences.map((exp, i) => (
-            <ExperienceCard key={`experience-${i}`} experience={exp} />
-          ))}
+          {
+            experiences.map((experience, i) => (
+              <ExperienceCard key={`experience${i}`} experience={experience} />
+            ))
+          }
         </VerticalTimeline>
       </div>
     </>

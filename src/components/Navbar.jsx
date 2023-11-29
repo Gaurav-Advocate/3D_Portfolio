@@ -4,11 +4,14 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
-useState;
+
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(true);
   const [isNavColor, setNavColor] = useState(false);
+
+  console.log(active);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,8 +39,9 @@ const Navbar = () => {
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         <Link
           to="/"
-          className="flex items-center gap-3"
+          className="flex cursor-pointer items-center gap-3"
           onClick={() => {
+            console.log('click');
             setActive("");
             scrollTo(0, 0);
           }}
@@ -57,7 +61,7 @@ const Navbar = () => {
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
               } cursor-pointer text-[18px] font-medium hover:text-white`}
-              onClick={() => setActive(link.title)}
+              onClick={() => (setActive(link.title, console.log('click')))}
             >
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
@@ -85,6 +89,7 @@ const Navbar = () => {
                   onClick={() => {
                     setActive(link.title);
                     setToggle(!toggle);
+                    console.log('click');
                   }}
                 >
                   <a href={`#${link.id}`}>{link.title}</a>

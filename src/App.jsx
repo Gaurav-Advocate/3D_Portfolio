@@ -23,21 +23,22 @@ import { Mouse } from "./components/canvas";
  */
 
 function App() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [mouseModes, setMouseModes] = useState("default");
 
-  const cusoreMove = {
-    default: {
-      x: mousePosition.x - 40,
-      y: mousePosition.y - 40,
-    },
-    text: {
-      width: 160,
-      height: 160,
-      x: mousePosition.x - 80,
-      y: mousePosition.y - 80,
-    },
-  };
+  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  // const [mouseModes, setMouseModes] = useState("default");
+
+  // const cusoreMove = {
+  //   default: {
+  //     x: mousePosition.x - 40,
+  //     y: mousePosition.y - 40,
+  //   },
+  //   text: {
+  //     width: 160,
+  //     height: 160,
+  //     x: mousePosition.x - 80,
+  //     y: mousePosition.y - 80,
+  //   },
+  // };
 
   
 
@@ -61,14 +62,8 @@ function App() {
     <>
       <div className="relative z-0 bg-primary">
         <div className="flex bg-hero-pattern bg-cover bg-center bg-no-repeat pointer-events-none">
-          <Navbar />
-          <Mouse
-            cursoreMove={cusoreMove}
-            mouseModes={mouseModes}
-          />
-          
+          <Navbar />            
           <Hero 
-          // textInhance={textInhance} textNormal={textNormal}
            />
         </div>
         <About />
