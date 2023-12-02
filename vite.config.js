@@ -8,5 +8,4 @@ export default defineConfig({
     port: 8880,
     host: true,
   },
-  base: '/3D_Portfolio'
 })

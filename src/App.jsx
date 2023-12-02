@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import {
   About,
   Contact,
@@ -10,7 +9,6 @@ import {
   Works,
   StarsCanvas,
 } from "./components";
-import { Mouse } from "./components/canvas";
 
 /**
  *
@@ -23,39 +21,6 @@ import { Mouse } from "./components/canvas";
  */
 
 function App() {
-
-  // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  // const [mouseModes, setMouseModes] = useState("default");
-
-  // const cusoreMove = {
-  //   default: {
-  //     x: mousePosition.x - 40,
-  //     y: mousePosition.y - 40,
-  //   },
-  //   text: {
-  //     width: 160,
-  //     height: 160,
-  //     x: mousePosition.x - 80,
-  //     y: mousePosition.y - 80,
-  //   },
-  // };
-
-
-  // useEffect(() => {
-
-  //   function mouseEffect(e) {
-  //     setMousePosition({ x: e.clientX, y: e.clientY });
-  //   }
-
-  //   addEventListener("mousemove", mouseEffect);
-
-  //   return () => {
-  //     removeEventListener("mousemove", mouseEffect);
-  //   };
-  // }, []);
-
-  // const textInhance = () => setMouseModes("text");
-  // const textNormal = () => setMouseModes("default");
 
   return (
     <>

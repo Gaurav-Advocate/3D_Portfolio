@@ -52,7 +52,7 @@ const Navbar = () => {
           </p>
         </Link>
         <ul className="hidden list-none flex-row gap-10 sm:flex">
-          {navLinks.map((link, i) => (
+          {navLinks.map((link) => (
             <li
               key={link.id}
               className={`${
@@ -77,7 +77,7 @@ const Navbar = () => {
             } black-gradient absolute right-0 top-20 z-10 mx-4 my-2 min-w-[140px] rounded-xl p-6`}
           >
             <ul className="flex list-none flex-col gap-4 justify-end  items-start ">
-              {navLinks.map((link, i) => (
+              {navLinks.map((link) => (
                 <li
                   key={link.id}
                   className={`${

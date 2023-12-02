@@ -7,7 +7,7 @@ import CanvasLoader from "../Loader";
 const Computers = ({isMobile}) => {
 
   // stores the computer 3D model (react-theejs)
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+  const computer = useGLTF("../desktop_pc/scene.gltf");
 
 
   // lighting required 

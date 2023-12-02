@@ -1,7 +1,5 @@
-import { Circle } from "@react-three/drei";
 import { motion} from 'framer-motion'
 
-import React from "react";
 
 function Mouse( { mouseModes, cursoreMove} ) {
 

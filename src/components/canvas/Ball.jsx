@@ -1,10 +1,9 @@
-import React, { Suspense, useRef } from "react";
+import { Suspense } from "react";
 import {
   Decal,
   Float,
   OrbitControls,
   Preload,
-  Shadow,
   useTexture,
 } from "@react-three/drei";
 
