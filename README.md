@@ -1,26 +1,12 @@
-
 # Portfolio With Threejs
 
-![3D portfolio](./src/assets/portfolio_image.png)
-
-![3D portfolio](https://www.dropbox.com/scl/fi/yi6g01xniwtcdgix1pxfj/Screenshot-2023-11-23-233512.png?rlkey=yj8dav79ye6avfvidl7nypkdy&dl=0)
-
-![From GitHub](https://github.com/Gaurav-Advocate/Deploy_3D_Portfolio/issues/1#issue-2013541953)
+<p align="left"> <a href="https://deploy-3-d-portfolio.vercel.app/" target="_blank" rel="noreferrer"> <img src="./src/assets/portfolio_image.png" alt="amplify" /> </a> </p>
 
 
 ## Tech Stack
 
-**1.** React 
-
-**2.** Vite
-
-**3.** TailwindCSS
-
-**4.** Framer Motion
-
-**5.** ThreeJS
-
-
-
-
+ <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>
+ <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" alt="react" width="40" height="40"/> </a> 
+ <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="react" width="40" height="40"/> </a> 
+ <a href="https://threejs.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Three.js_Icon.svg" alt="react" width="40" height="40"/> </a> 
 
